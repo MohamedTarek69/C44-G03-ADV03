@@ -36,6 +36,22 @@
 
             #endregion
 
+            //--------------------------------- Vedio 02 ---------------------------------
+            #region Example 02
+            //int[] Numbers = { 7, 5, 6, 3, 2, 1, 8, 9, 4 };
+
+            ////SortingAlgorithms.BubbleSort(Numbers);
+            ////SortingAlgorithms.BubbleSort(Numbers, SortingTypes.CompareGreater);
+
+            //SortingTypesFuncDelegate sortingTypes = SortingTypes.CompareLess;
+            //SortingAlgorithms.BubbleSort(Numbers, sortingTypes);
+
+            //foreach (int i in Numbers)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+            #endregion
 
         }
     }
