@@ -36,22 +36,36 @@
 
             #endregion
 
-            //--------------------------------- Vedio 02 ---------------------------------
+            //--------------------------------- Vedio 02/03  ---------------------------------
             #region Example 02
             //int[] Numbers = { 7, 5, 6, 3, 2, 1, 8, 9, 4 };
-
             ////SortingAlgorithms.BubbleSort(Numbers);
-            ////SortingAlgorithms.BubbleSort(Numbers, SortingTypes.CompareGreater);
+            //SortingAlgorithms<int>.BubbleSort(Numbers, SortingTypes.SortAsc);
 
-            //SortingTypesFuncDelegate sortingTypes = SortingTypes.CompareLess;
-            //SortingAlgorithms.BubbleSort(Numbers, sortingTypes);
+            ////SortingTypesFuncDelegate<int> sortingTypes = SortingTypes.SortDesc;
+            ////SortingAlgorithms<int>.BubbleSort(Numbers, sortingTypes);
 
             //foreach (int i in Numbers)
             //{
             //    Console.WriteLine(i);
             //}
 
+            //string[] Names = { "Omar", "Moahmed", "Amr", "Salma" };
+
+            ////SortingAlgorithms<string>.BubbleSort(Names, SortingTypes.SortAsc);
+
+            //SortingTypesFuncDelegate<string , string , bool > sortingTypes = SortingTypes.SortDesc;
+
+            //SortingAlgorithms<string>.BubbleSort(Names, sortingTypes);
+
+            //foreach (string s in Names)
+            //{
+            //    Console.WriteLine(s);
+            //}
+
             #endregion
+
+
 
         }
     }

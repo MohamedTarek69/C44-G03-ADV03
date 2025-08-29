@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace Session_03
 {
-    public delegate bool SortingTypesFuncDelegate(int a, int b);
-    internal static class SortingAlgorithms
+    public delegate Tout SortingTypesFuncDelegate<T1,T2,out Tout>(T1 a, T2 b);
+    internal static class SortingAlgorithms<T>
     {
-        public static void BubbleSort(int[] Arr, SortingTypesFuncDelegate sortingTypes )
+        public static void BubbleSort(T[] Arr, SortingTypesFuncDelegate<T , T , bool > sortingTypes)
         {
             if (Arr?.Length > 0 && sortingTypes is not null)
-                for (int i = 0; i < Arr.Length; i++)
+                for (int i = 0; i < Arr.Length - 1; i++)
                     for (int j = 0; j < Arr.Length - 1 - i; j++)
-                        //if (Arr[j] > Arr[j + 1])
-                        if (sortingTypes?.Invoke(Arr[j], Arr[j+1])??false)
+                        if (sortingTypes(Arr[j], Arr[j + 1]))
                             SWAP(ref Arr[j], ref Arr[j + 1]);
         }
 
@@ -28,9 +27,9 @@ namespace Session_03
         //                    SWAP(ref Arr[j], ref Arr[j + 1]);
         //}
 
-        public static void SWAP(ref int X, ref int Y)
+        public static void SWAP(ref T X, ref T Y)
         {
-            int Temp = X;
+            T Temp = X;
             X = Y;
             Y = Temp;
         }
