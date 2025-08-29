@@ -28,5 +28,16 @@ namespace Session_03
         {
             return number % 10 == 0;
         }
+
+        public static bool CheckLengthLessThanFour(string name)
+        {
+            return name?.Length < 4;
+        }
+
+        public static bool CheckLengthMoreThanFour(string name)
+        {
+            return name?.Length > 4;
+        }
+
     }
 }

@@ -65,22 +65,33 @@
 
             #endregion
 
-            //--------------------------------- Vedio 04 ---------------------------------
+            //--------------------------------- Vedio 04/05 ---------------------------------
             #region Example 03
-            List<int> Numbers = Enumerable.Range(1, 100).ToList();
+            //List<int> Numbers = Enumerable.Range(1, 100).ToList();
 
-            List<int> OddNumbers = FilterLists.FindNumbers(Numbers, FilterOfLists.CheckOdd);
+            //List<int> OddNumbers = FilterLists.FindElements(Numbers, FilterOfLists.CheckOdd);
 
-            FilterFuncDelegate filter = FilterOfLists.CheckEven;
-            List<int> EvenNumbers = FilterLists.FindNumbers(Numbers , filter);
+            //FilterFuncDelegate<int> filter = FilterOfLists.CheckEven;
+            //List<int> EvenNumbers = FilterLists.FindElements(Numbers, filter);
 
-            List<int> Divisble07Numbers = FilterLists.FindNumbers(Numbers, FilterOfLists.DivisibleBy7);
-            List<int> Divisble10Numbers = FilterLists.FindNumbers(Numbers, FilterOfLists.DivisibleBy10);
+            //List<int> Divisble07Numbers = FilterLists.FindElements(Numbers, FilterOfLists.DivisibleBy7);
+            //List<int> Divisble10Numbers = FilterLists.FindElements(Numbers, FilterOfLists.DivisibleBy10);
 
-            foreach (int num in Divisble10Numbers)
-            {
-                Console.Write($"{num} ");
-            }
+            //foreach (int num in Divisble10Numbers)
+            //{
+            //    Console.Write($"{num} ");
+            //}
+
+            //List<string> Names = new List<string>() { "Ahmed", "Aya", "Khalid", "Rawan", "Amr", "Heba" };
+
+            //List<string> Names = ["Ahmed", "Aya", "Khalid", "Rawan", "Amr", "Heba"];
+            //List<string> FilterName = FilterLists.FindElements(Names, FilterOfLists.CheckLengthLessThanFour);
+            //List<string> FilterName02 = FilterLists.FindElements(Names, FilterOfLists.CheckLengthMoreThanFour);
+
+            //foreach (string s in FilterName02)
+            //{
+            //    Console.WriteLine(s);
+            //}
 
             #endregion
 

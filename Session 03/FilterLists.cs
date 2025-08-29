@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Session_03
 {
-    public delegate bool FilterFuncDelegate(int a);
+    public delegate bool FilterFuncDelegate<T>(T a);
 
     internal static class FilterLists
     {
-        public static List<int> FindNumbers(List<int> numbers , FilterFuncDelegate filter)
+        public static List<T> FindElements<T>(List<T> numbers , FilterFuncDelegate<T> filter)
         {
-            List<int> Result = new List<int>();
+            List<T> Result = new List<T>();
             if (numbers?.Count > 0)
             {
                 for (int i = 0; i < numbers.Count; i++)
