@@ -133,6 +133,54 @@
 
             #endregion
 
+            //--------------------------------- Vedio 07 ---------------------------------
+            #region Anonymous Method
+
+            //Action<string> action02 = delegate (string name) { Console.WriteLine($"Hello {name}"); };
+            //action02.Invoke("Mohamed");
+            //action02("Mohamed");
+
+            //Action action = delegate () { Console.WriteLine("Hello Route"); };
+            //action.Invoke();
+            //action();
+
+            //Func<int, string> func = delegate (int number) { return number.ToString(); };
+            //string Number = func.Invoke(42);
+            //Number = func(42);
+
+            //Console.WriteLine(Number);
+
+            //Predicate<int> predicate = delegate (int number) { return number > 0; };
+            //bool flag = predicate.Invoke(10);
+            //flag = predicate(20);
+
+            //Console.WriteLine(flag);
+
+            #endregion
+
+            #region Lambda Expression
+
+            Action<string> action02 = name => Console.WriteLine($"Hello {name}"); 
+            action02.Invoke("Mohamed");
+            action02("Mohamed");
+
+            Action action = () => Console.WriteLine("Hello Route"); 
+            action.Invoke();
+            action();
+
+            Func<int, string> func = number =>number.ToString(); 
+            string Number = func.Invoke(42);
+            Number = func(42);
+
+            Console.WriteLine(Number);
+
+            Predicate<int> predicate = number => number > 0;
+            bool flag = predicate.Invoke(10);
+            flag = predicate(20);
+
+            Console.WriteLine(flag);
+
+            #endregion
 
         }
     }
