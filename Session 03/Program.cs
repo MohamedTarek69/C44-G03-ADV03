@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-        public delegate int StringFuncDelegate(string s);
+        //public delegate int StringFuncDelegate(string s);
         // New Delegate [Class]
         // Ref From Delegate can Refer to Function or More [pointer to Function]
         // this function can be static Function [Class member function]
@@ -14,36 +14,49 @@
         {
             //--------------------------------- Vedio 01 ---------------------------------
             #region Example 01
-            ////int x = StringFunctions.GetCountOfUpperCaseChar(); // invalid
-            //// 1. Declare Reference From Delegate
+            //int x = StringFunctions.GetCountOfUpperCaseChar(); // invalid
+            // 1. Declare Reference From Delegate
             //StringFuncDelegate stringFunc;
 
-            //// 2. Initialize Reference From Delegate[Pointer To Function]
+            // 2. Initialize Reference From Delegate[Pointer To Function]
             //stringFunc = new StringFuncDelegate(StringFunctions.GetCountOfUpperCaseChar);
+
+            //Func<string , int> func = StringFunctions.GetCountOfUpperCaseChar;
+            //int Result = func.Invoke("RouTe");
+            //Result = func("MoHaMeD TaReK");
+            //Console.WriteLine(Result);
+
+            //Func<string , int> func01 = StringFunctions.GetCountOfLowerCaseChar;
+            //int Result01 = func01.Invoke("RouTe");
+            //Result01 = func01("MoHaMeD TaReK");
+            //Console.WriteLine(Result01);
 
             //stringFunc = StringFunctions.GetCountOfUpperCaseChar;
             //stringFunc = StringFunctions.GetCountOfLowerCaseChar;
 
-            ////stringFunc = StringFunctions.GetCountOfUpperCaseChar;
-            ////stringFunc += StringFunctions.GetCountOfLowerCaseChar;
-            ////stringFunc -= StringFunctions.GetCountOfLowerCaseChar;
-            ////stringFunc -= StringFunctions.GetCountOfUpperCaseChar;
+            //stringFunc = StringFunctions.GetCountOfUpperCaseChar;
+            //stringFunc += StringFunctions.GetCountOfLowerCaseChar;
+            //stringFunc -= StringFunctions.GetCountOfLowerCaseChar;
+            //stringFunc -= StringFunctions.GetCountOfUpperCaseChar;
 
-            ////3.Use Delegate Reference[Call Method]
+            //3.Use Delegate Reference[Call Method]
             //int Result = stringFunc.Invoke("RouTe");
             //Result = stringFunc("MoHaMeD TaReK");
             //Console.WriteLine(Result);
+
+
+
 
             #endregion
 
             //--------------------------------- Vedio 02/03  ---------------------------------
             #region Example 02
             //int[] Numbers = { 7, 5, 6, 3, 2, 1, 8, 9, 4 };
-            ////SortingAlgorithms.BubbleSort(Numbers);
+            //SortingAlgorithms.BubbleSort(Numbers);
             //SortingAlgorithms<int>.BubbleSort(Numbers, SortingTypes.SortAsc);
 
-            ////SortingTypesFuncDelegate<int> sortingTypes = SortingTypes.SortDesc;
-            ////SortingAlgorithms<int>.BubbleSort(Numbers, sortingTypes);
+            //Func<int,int,bool> sortingTypes = SortingTypes.SortDesc;
+            //SortingAlgorithms<int>.BubbleSort(Numbers, sortingTypes);
 
             //foreach (int i in Numbers)
             //{
@@ -52,9 +65,9 @@
 
             //string[] Names = { "Omar", "Moahmed", "Amr", "Salma" };
 
-            ////SortingAlgorithms<string>.BubbleSort(Names, SortingTypes.SortAsc);
+            //SortingAlgorithms<string>.BubbleSort(Names, SortingTypes.SortAsc);
 
-            //SortingTypesFuncDelegate<string , string , bool > sortingTypes = SortingTypes.SortDesc;
+            //Func<string, string, bool> sortingTypes = SortingTypes.SortDesc;
 
             //SortingAlgorithms<string>.BubbleSort(Names, sortingTypes);
 
@@ -71,18 +84,18 @@
 
             //List<int> OddNumbers = FilterLists.FindElements(Numbers, FilterOfLists.CheckOdd);
 
-            //FilterFuncDelegate<int> filter = FilterOfLists.CheckEven;
+            //Predicate<int> filter = FilterOfLists.CheckEven;
             //List<int> EvenNumbers = FilterLists.FindElements(Numbers, filter);
 
             //List<int> Divisble07Numbers = FilterLists.FindElements(Numbers, FilterOfLists.DivisibleBy7);
             //List<int> Divisble10Numbers = FilterLists.FindElements(Numbers, FilterOfLists.DivisibleBy10);
 
-            //foreach (int num in Divisble10Numbers)
+            //foreach (int num in EvenNumbers)
             //{
             //    Console.Write($"{num} ");
             //}
 
-            //List<string> Names = new List<string>() { "Ahmed", "Aya", "Khalid", "Rawan", "Amr", "Heba" };
+            ////List<string> Names = new List<string>() { "Ahmed", "Aya", "Khalid", "Rawan", "Amr", "Heba" };
 
             //List<string> Names = ["Ahmed", "Aya", "Khalid", "Rawan", "Amr", "Heba"];
             //List<string> FilterName = FilterLists.FindElements(Names, FilterOfLists.CheckLengthLessThanFour);
@@ -92,6 +105,31 @@
             //{
             //    Console.WriteLine(s);
             //}
+
+            #endregion
+
+            //--------------------------------- Vedio 06 ---------------------------------
+            #region Built in Delegate
+
+            //Action<string> action02 = TestBuiltInDelegate.Print;
+            //action02.Invoke("Mohamed");
+            //action02("Mohamed");
+
+            //Action action = TestBuiltInDelegate.Print;
+            //action.Invoke();
+            //action();
+
+            //Func<int, string> func = TestBuiltInDelegate.Casting;
+            //string Number = func.Invoke(42);
+            //Number = func(42);
+
+            //Console.WriteLine(Number);
+
+            //Predicate<int> predicate = TestBuiltInDelegate.CheckPostive;
+            //bool flag = predicate.Invoke(10);
+            //flag = predicate(20);
+
+            //Console.WriteLine(flag);
 
             #endregion
 

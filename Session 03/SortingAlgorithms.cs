@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Session_03
 {
-    public delegate Tout SortingTypesFuncDelegate<T1,T2,out Tout>(T1 a, T2 b);
+    //public delegate Tout SortingTypesFuncDelegate<T1,T2,out Tout>(T1 a, T2 b);
     internal static class SortingAlgorithms<T>
     {
-        public static void BubbleSort(T[] Arr, SortingTypesFuncDelegate<T , T , bool > sortingTypes)
+        public static void BubbleSort(T[] Arr, Func<T,T,bool> sortingTypes)
         {
             if (Arr?.Length > 0 && sortingTypes is not null)
                 for (int i = 0; i < Arr.Length - 1; i++)
