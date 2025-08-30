@@ -44,9 +44,6 @@
             //Result = stringFunc("MoHaMeD TaReK");
             //Console.WriteLine(Result);
 
-
-
-
             #endregion
 
             //--------------------------------- Vedio 02/03  ---------------------------------
@@ -160,28 +157,70 @@
 
             #region Lambda Expression
 
-            Action<string> action02 = name => Console.WriteLine($"Hello {name}"); 
-            action02.Invoke("Mohamed");
-            action02("Mohamed");
+            //Action<string> action02 = name => Console.WriteLine($"Hello {name}"); 
+            //action02.Invoke("Mohamed");
+            //action02("Mohamed");
 
-            Action action = () => Console.WriteLine("Hello Route"); 
-            action.Invoke();
-            action();
+            //Action action = () => Console.WriteLine("Hello Route"); 
+            //action.Invoke();
+            //action();
 
-            Func<int, string> func = number =>number.ToString(); 
-            string Number = func.Invoke(42);
-            Number = func(42);
+            //Func<int, string> func = number => number.ToString(); 
+            //string Number = func.Invoke(42);
+            //Number = func(42);
 
-            Console.WriteLine(Number);
+            //Console.WriteLine(Number);
 
-            Predicate<int> predicate = number => number > 0;
-            bool flag = predicate.Invoke(10);
-            flag = predicate(20);
+            //Predicate<int> predicate = number => number > 0;
+            //bool flag = predicate.Invoke(10);
+            //flag = predicate(20);
 
-            Console.WriteLine(flag);
+            //Console.WriteLine(flag);
+
+            #endregion
+
+            //--------------------------------- Vedio 08 ---------------------------------
+            #region List<T>Methods Take Function As Parameter
+            List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            //bool Flag = Numbers.Exists(number => number == 10);
+            //int Element = Numbers.Find(X => X % 2 == 0);
+            //Element = Numbers.FindLast(X => X % 2 == 0);
+
+            //int index = Numbers.FindIndex(X => X % 2 == 0);
+            //index = Numbers.FindLastIndex(X => X % 2 == 0);
+
+            //List<int> oddNumbers = Numbers.FindAll(X => X % 2 != 0);
+
+            //foreach (int number in oddNumbers)
+            //    Console.WriteLine(number);
+
+            //Numbers.ForEach(X => Console.WriteLine(++X));
+
+            //foreach (int number in Numbers)
+            //    Console.WriteLine(number);
+
+            //bool flag = Numbers.TrueForAll(X => X % 2 == 0);
+
+            //Console.WriteLine(flag);
+
+
+            //Console.WriteLine(index);
+
+            //Numbers.RemoveAll(X => X % 2 == 0);
+
+            //foreach (int number in Numbers)
+            //{
+            //    Console.WriteLine(number);
+            //}
 
             #endregion
 
         }
+        public static bool Check(int number)
+        {
+            return number == 10;
+        }
+
     }
 }
