@@ -15,7 +15,7 @@ namespace Session_03
             {
                 return b.Title;
             }
-            return "N/A";
+            return "No Title";
         }
         public static string GetAuthor(Book b)
         {
@@ -23,7 +23,7 @@ namespace Session_03
             {  
                 return b.Author; 
             }
-            return "N/A";
+            return "No Author";
         }
         public static string GetPrice(Book B)
         {
@@ -31,17 +31,17 @@ namespace Session_03
             {
                 return B.Price.ToString("C", new System.Globalization.CultureInfo("en-US"));
             }
-            return "N/A";
+            return "No Price";
         }
         // Anonymus Function + returns User Defined Delegate  
         public static BookFunctionDelegate GetISBN()
         {
-            return delegate (Book b) { return b is not null ? b.ISBN.ToString() : "N/A"; };
+            return delegate (Book b) { return b is not null ? b.ISBN.ToString() : "No ISBN"; };
         }
         // Lambda Expression + returns Build-In Delegate  
         public static Func<Book, string> GetPublicationDate()
         {
-            return b => b is not null ? b.PublicationDate.ToShortDateString() : "N/A"; ;
+            return b => b is not null ? b.PublicationDate.ToShortDateString() : "No Publication Date"; ;
         }
     }
 }
