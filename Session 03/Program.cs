@@ -216,6 +216,31 @@
 
             #endregion
 
+            //--------------------------------- Vedio 09 ---------------------------------
+            #region Functions can return other functions
+            //FunctionsReturnsDelegates.DelegateAction(); // Do Nothing
+
+            //Action action = FunctionsReturnsDelegates.DelegateAction();
+            //action();
+            //action.Invoke();
+
+            //FunctionsReturnsDelegates.DelegateAction().Invoke();
+            //FunctionsReturnsDelegates.DelegateAction()();
+
+            //Predicate<int> predicate = FunctionsReturnsDelegates.DelegatePredicate();
+            //bool flag = predicate.Invoke(1);
+            //flag = predicate(1);
+
+            //flag = FunctionsReturnsDelegates.DelegatePredicate().Invoke(1);
+            //flag = FunctionsReturnsDelegates.DelegatePredicate()(1);
+
+            //Console.WriteLine(flag);
+
+            //string name = FunctionsReturnsDelegates.DelegateFunc()(new char[] { 'R', 'o', 'u', 't', 'e' });
+            //Console.WriteLine(name);
+
+            #endregion
+
         }
         public static bool Check(int number)
         {
